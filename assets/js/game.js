@@ -11,6 +11,9 @@ var enemyAttack = 12;
 
 // create function
 var fight = function () {
+  var promptFight = window.prompt(
+    "Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose."
+  );
   // Alert players that they are starting the round
   window.alert('Welcome to Robot Gladiators!');
   // put new code under this
@@ -65,6 +68,12 @@ var fight = function () {
       playerHealth +
       ' health remaining.'
   );
+  // check player's health
+  if (playerHealth <= 0) {
+    window.alert(playerName + ' has died!');
+  } else {
+    window.alert(playerName + ' still has ' + playerHealth + ' health left.');
+  }
 };
 
 fight();
