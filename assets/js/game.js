@@ -6,12 +6,21 @@ var playerMoney = 10;
 // You can also log multiple values at once like this
 console.log(playerName, playerAttack, playerHealth);
 
-var enemyName = 'Roborto';
+var enemyNames = ['Roborto', 'Amy Android', 'Robo Trumble'];
+console.log(enemyNames[0]);
+console.log(enemyNames[1]);
+console.log(enemyNames[2]);
+console.log(enemyNames.length);
+for (var i = 0; i < enemyNames.length; i++) {
+  console.log(enemyNames[i]);
+  console.log(i);
+  console.log(enemyNames[i] + ' is at ' + i + ' index');
+}
 var enemyHealth = 50;
 var enemyAttack = 12;
 
 // create function
-var fight = function () {
+var fight = function (enemyName) {
   var promptFight = window.prompt(
     "Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose."
   );
@@ -55,7 +64,9 @@ var fight = function () {
     }
     // if no (false), ask question again by running fight() again
     else {
-      fight();
     }
   }
 };
+for (var i = 0; i < enemyNames.length; i++) {
+  fight(enemyNames[i]);
+}
