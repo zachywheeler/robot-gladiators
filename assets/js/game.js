@@ -23,16 +23,16 @@ var playerInfo = {
       window.alert("You don't have enough money!");
     }
   },
-  upgradeAttack: function() {
-  if (this.money >= 7) {
-    window.alert("Upgrading player's attack by 6 for 7 dollars.");
-    this.attack += 6;
-    this.money -= 7;
-  } 
-  else {
-    window.alert("You don't have enough money!");
-  }
-},
+  upgradeAttack: function () {
+    if (this.money >= 7) {
+      window.alert("Upgrading player's attack by 6 for 7 dollars.");
+      this.attack += 6;
+      this.money -= 7;
+    } else {
+      window.alert("You don't have enough money!");
+    }
+  },
+};
 // You can also log multiple values at once like this
 console.log(playerInfo.money, playerInfo.attack, playerInfo.health);
 
@@ -198,14 +198,14 @@ var shop = function () {
   );
   // use switch to carry out action
   switch (shopOptionPrompt) {
-    case "REFILL":
-case "refill":
-  playerInfo.refillHealth();
-  break;
-   case "UPGRADE":
-case "upgrade":
-  playerInfo.upgradeAttack();
-  break;
+    case 'REFILL':
+    case 'refill':
+      playerInfo.refillHealth();
+      break;
+    case 'UPGRADE':
+    case 'upgrade':
+      playerInfo.upgradeAttack();
+      break;
     case 'LEAVE': // new case
     case 'leave':
       window.alert('Leaving the store.');
@@ -216,5 +216,4 @@ case "upgrade":
       break;
   }
 };
-
 startGame();
