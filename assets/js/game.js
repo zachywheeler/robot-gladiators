@@ -8,9 +8,6 @@ var randomNumber = function (min, max) {
 var getPlayerName = function () {
   var name = '';
 
-  // ***************************************
-  // ADD LOOP HERE WITH PROMPT AND CONDITION
-  // ***************************************
   while (name === '' || name === null) {
     name = prompt("What is your robot's name?");
   }
@@ -105,7 +102,9 @@ fightOrSkip = function () {
       shop();
     }
   }
+  return false;
 };
+
 var fight = function (enemy) {
   while (playerInfo.health > 0 && enemy.health > 0) {
     // ask player if they'd like to fight or run
